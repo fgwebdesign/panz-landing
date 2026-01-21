@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "bgThumb": "hero1.jpg",
+        "subTitle": "Bienvenidos a",
+        "titleFirst": "PANZ",
+        "titleLast": "Pizzería y Restaurante",
+        "textFirst": "Desde hace más de 30 años acompañamos a la gente de Paysandú",
+        "textLast": "en sus momentos más importantes",
+        "btnText": "Ver Menú"
+    },
+    {
+        "id": 2,
+        "bgThumb": "hero2.webp",
+        "subTitle": "Sabores Auténticos",
+        "titleFirst": "Elaboración Propia",
+        "titleLast": "Ingredientes Frescos",
+        "textFirst": "Todos nuestros productos son de elaboración propia",
+        "textLast": "preparados con dedicación y profesionalismo",
+        "btnText": "Ver Menú"
+    }
+]

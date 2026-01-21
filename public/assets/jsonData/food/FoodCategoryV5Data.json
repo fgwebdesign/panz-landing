@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "thumb": "pizzas.jpeg",
+        "rating": 5.0,
+        "title": "Pizzas",
+        "text": "Panceta, cebolla salteada, muzzarella, dos huevos fritos y papas noisette. Un clásico de la casa.",
+        "delay": "100",
+        "newPrice": 690
+    },
+    {
+        "id": 2,
+        "thumb": "parrilla.jpeg",
+        "rating": 5.0,
+        "title": "Parrilla",
+        "text": "Carne, cebolla, tomate, lechuga, huevo frito, muzzarella, mayonesa y aceitunas. Con pan casero y papas fritas.",
+        "delay": "200",
+        "newPrice": 590
+    },
+    {
+        "id": 3,
+        "thumb": "papasfritas.jpeg",
+        "rating": 5.0,
+        "title": "Papas Fritas",
+        "text": "200gr de carne, cheddar, cebolla caramelizada, panceta crocante, lechuga y tomate. Con papas rústicas.",
+        "delay": "300",
+        "newPrice": 520
+    },
+    {
+        "id": 4,
+        "thumb": "pastas.jpeg",
+        "rating": 5.0,
+        "title": "Pastas",
+        "text": "Masa artesanal, salsa de tomate, muzzarella, jamón y orégano. Elaborada diariamente por nuestro maestro pizzero.",
+        "delay": "400",
+        "newPrice": 450
+    },
+    {
+        "id": 5,
+        "thumb": "17.jpg",
+        "rating": 4.7,
+        "title": "Salmon Steak",
+        "text": "Cheese, Ham & Pineapple",
+        "delay": "100",
+        "newPrice": 11.00
+    },
+    {
+        "id": 6,
+        "thumb": "18.jpg",
+        "rating": 5.0,
+        "title": "Fries McDonald's",
+        "text": "Cheese, Ham & Pineapple",
+        "delay": "200",
+        "newPrice": 13.00
+    },
+    {
+        "id": 7,
+        "thumb": "19.jpg",
+        "rating": 4.8,
+        "title": "Chocolate chip",
+        "text": "Cheese, Ham & Pineapple",
+        "delay": "300",
+        "newPrice": 15.00
+    },
+    {
+        "id": 8,
+        "thumb": "20.jpg",
+        "rating": 4.3,
+        "title": "Meatballs Pasta",
+        "text": "Cheese, Ham & Pineapple",
+        "delay": "400",
+        "newPrice": 17.00
+    }
+]

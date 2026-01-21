@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "title": "Parrilla",
+        "thumb": "parrilla.jpeg",
+        "price": 590,
+        "rating": 5,
+        "description": "Carne, cebolla, tomate, lechuga, huevo frito, muzzarella, mayonesa y aceitunas. Con pan casero y papas fritas."
+    },
+    {
+        "id": 2,
+        "title": "Pizzas",
+        "thumb": "pizzas.jpeg",
+        "price": 690,
+        "rating": 5,
+        "description": "Panceta, cebolla salteada, muzzarella, dos huevos fritos y papas noisette. Un clásico de la casa."
+    },
+    {
+        "id": 3,
+        "title": "Papas Fritas",
+        "thumb": "papasfritas.jpeg",
+        "price": 520,
+        "rating": 5,
+        "description": "200gr de carne, cheddar, cebolla caramelizada, panceta crocante, lechuga y tomate. Con papas rústicas."
+    },
+    {
+        "id": 4,
+        "title": "Pastas",
+        "thumb": "pastas.jpeg",
+        "price": 450,
+        "rating": 5,
+        "description": "Masa artesanal, salsa de tomate, muzzarella, jamón y orégano. Elaborada diariamente por nuestro maestro pizzero."
+    }
+]

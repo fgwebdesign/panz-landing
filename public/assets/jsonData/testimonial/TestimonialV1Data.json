@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "ratings": 5,
+        "rate": "5/5",
+        "title": "La mejor comida de todas",
+        "text": "Excelente experiencia gastronómica. La calidad de los ingredientes y la dedicación en cada plato son evidentes. El servicio es impecable y el ambiente es acogedor. Sin duda volveremos pronto.",
+        "name": "Mateo Jiménez",
+        "designation": "Consultor Senior"
+    },
+    {
+        "id": 2,
+        "ratings": 5,
+        "rate": "5/5",
+        "title": "Increíble y deliciosa comida",
+        "text": "Una experiencia culinaria excepcional. Cada plato está preparado con pasión y se nota en el sabor. El personal es muy atento y profesional. Recomiendo ampliamente este lugar a todos.",
+        "name": "Ignacio Álvarez",
+        "designation": "Gerente de Marketing"
+    },
+    {
+        "id": 3,
+        "ratings": 5,
+        "rate": "5/5",
+        "title": "La mejor comida de todas",
+        "text": "Excelente experiencia gastronómica. La calidad de los ingredientes y la dedicación en cada plato son evidentes. El servicio es impecable y el ambiente es acogedor. Sin duda volveremos pronto.",
+        "name": "Mateo Jiménez",
+        "designation": "Consultor Senior"
+    },
+    {
+        "id": 4,
+        "ratings": 5,
+        "rate": "5/5",
+        "title": "Increíble y deliciosa comida",
+        "text": "Una experiencia culinaria excepcional. Cada plato está preparado con pasión y se nota en el sabor. El personal es muy atento y profesional. Recomiendo ampliamente este lugar a todos.",
+        "name": "Ignacio Álvarez",
+        "designation": "Gerente de Marketing"
+    }
+]
