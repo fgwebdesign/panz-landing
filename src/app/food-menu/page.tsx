@@ -6,13 +6,13 @@ import ReservationV1 from "@/components/reservation/ReservationV1";
 import TestimonialV1 from "@/components/testimonial/TestimonialV1";
 
 export const metadata = {
-    title: "Restan - Food Menu"
+    title: "PANZ - Menú"
 };
 
 const FoodMenuPage = () => {
     return (
         <>
-            <LayoutV6 breadCrumb="food-menu" title="Food Menu">
+            <LayoutV6 breadCrumb="Menú" title="Menú">
                 <FoodMenuV4 />
                 <DeliveryV1 />
                 <FoodMenuV5 />

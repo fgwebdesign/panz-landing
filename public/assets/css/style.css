@@ -5552,17 +5552,18 @@ p {
      background: var(--color-secondary);
  }
 
- .discount-badge strong {
-     display: block;
-     font-size: 40px;
-     font-weight: 900;
-     font-family: var(--font-default);
-     color: #ff9e07;
- }
+.discount-badge strong {
+    display: block;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: var(--font-default);
+    color: var(--white);
+}
 
- .food-menus-item .discount-badge strong {
-     font-family: var(--font-heading);
- }
+.food-menus-item .discount-badge strong {
+    font-family: var(--font-heading);
+    color: var(--white) !important;
+}
 
  .tab-content.food-menu-tab-content.style-two {
      background: transparent;
@@ -5650,11 +5651,15 @@ p {
      margin-top: 0;
  }
 
- .food-menus-item .thumb {
-     background-size: cover !important;
-     background-position: center !important;
-     position: relative;
- }
+.food-menus-item .thumb {
+    background-size: contain !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative;
+    height: 550px !important;
+    min-height: 550px !important;
+    max-height: 550px !important;
+}
 
  .food-menus-item .info {
      padding: 65px 50px;
@@ -8845,7 +8850,7 @@ footer.bg-dark .footer-bottom-two * {
      height: 40px;
      width: 40px;
      line-height: 40px;
-     background: #333333;
+     background: #ffffff;
      text-align: center;
      margin-right: 8px;
      margin-top: 10px;
@@ -9166,7 +9171,7 @@ footer.bg-dark .footer-bottom-two * {
  }
 
  .bg-dark .footer-style-one.bg-dark {
-     background: #2e2d2d !important;
+     background: #a13d3d !important;
  }
 
  .bg-dark .home-blog-style-one-item .info {
@@ -9187,7 +9192,8 @@ footer.bg-dark .footer-bottom-two * {
  }
 
  .bg-dark ul.footer-social li a {
-     background: #3f3f3f;
+     background: #000000;
+     border-radius: 50%;
  }
 
  .bg-dark .footer-style-one::after {
@@ -10415,11 +10421,14 @@ footer.bg-dark .footer-bottom-two * {
          bottom: -70px;
      }
 
-     .food-menus-item .thumb {
-         width: 100%;
-         height: 450px;
-         margin-bottom: 50px;
-     }
+    .food-menus-item .thumb {
+        width: 100%;
+        height: 450px;
+        margin-bottom: 50px;
+        background-size: contain !important;
+        background-repeat: no-repeat !important;
+        background-position: center !important;
+    }
 
      .food-menus-item .thumb .discount-badge {
          right: auto;
@@ -11236,6 +11245,9 @@ footer.bg-dark .footer-bottom-two * {
          width: 100%;
          height: 350px;
          margin-bottom: 50px;
+         background-size: contain !important;
+         background-repeat: no-repeat !important;
+         background-position: center !important;
      }
 
      .food-menus-item .thumb .discount-badge {
@@ -13575,5 +13587,71 @@ footer.bg-dark .footer-bottom-two * {
     .fab-whatsapp-send {
         padding: 10px 16px;
         font-size: 14px;
+    }
+}
+/* FoodMenuV4 - Mantener proporción de imágenes sin estirar */
+.food-menu-v4-thumb {
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+}
+
+/* Design Credit - Estilos modernos para el crédito de diseño */
+.design-credit {
+    margin: 0;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+.design-link {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.design-text {
+    font-weight: 600;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.design-link:hover .design-text {
+    background: linear-gradient(135deg, #ffa500 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    transform: translateY(-2px);
+}
+
+.design-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(135deg, #ff6b6b 0%, #ffa500 100%);
+    transition: width 0.3s ease;
+}
+
+.design-link:hover::after {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .design-credit {
+        justify-content: center;
+        text-align: center;
+        margin-top: 15px;
     }
 }

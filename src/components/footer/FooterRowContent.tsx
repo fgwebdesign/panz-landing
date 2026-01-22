@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import SocialShare from '../social/SocialShare';
-import FooterNewsLetter from '../form/FooterNewsLetter';
+import Image from 'next/image';
 
 const FooterRowContent = () => {
     return (
@@ -55,7 +55,8 @@ const FooterRowContent = () => {
                                     <i className="fas fa-phone"></i>
                                 </div>
                                 <div className="content">
-                                    <a href="tel:+47229551">4722 9551</a>
+                                    <a href="tel:+47229551">4722 9551</a> <br />
+                                    <a href="tel:+59891285003">+598 91 285 003</a>
                                 </div>
                             </li>
                             <li>
@@ -71,11 +72,24 @@ const FooterRowContent = () => {
                 </div>
 
                 <div className="col-lg-3 col-md-6 footer-item mt-50">
-                    <h4 className="widget-title">Newsletter</h4>
-                    <p>
-                        Únete a nuestra lista de suscriptores para recibir las últimas noticias y ofertas especiales.
-                    </p>
-                    <FooterNewsLetter />
+                    <h4 className="widget-title">Medios de pago</h4>
+          
+                    <div className="payment-methods">
+                        <Image 
+                            src="/assets/img/metodosdepago.png" 
+                            alt="Métodos de pago aceptados" 
+                            width={450} 
+                            height={120}
+                            className="img-fluid"
+                        />
+                           <Image 
+                            src="/assets/img/pagos.png" 
+                            alt="Métodos de pago aceptados" 
+                            width={450} 
+                            height={120}
+                            className="img-fluid"
+                        />
+                    </div>
                 </div>
             </div>
         </>

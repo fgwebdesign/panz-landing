@@ -1,6 +1,6 @@
-import HeaderTopV1 from '../header/HeaderTopV1';
-import FooterV1 from '../footer/FooterV1';
-import HeaderV6 from '../header/HeaderV6';
+import HeaderTopV2 from '../header/HeaderTopV2';
+import FooterV2 from '../footer/FooterV2';
+import HeaderV5 from '../header/HeaderV5';
 import BreadCrumb from '../breadCrumb/BreadCrumb';
 
 interface DataType {
@@ -14,11 +14,11 @@ const LayoutV6 = ({ children, breadCrumb, title, logoWhite }: DataType) => {
     return (
         <>
             <div className="wrapper">
-                <HeaderTopV1 />
-                <HeaderV6 logoWhite={logoWhite} />
+                <HeaderTopV2 />
+                <HeaderV5 />
                 {breadCrumb && <BreadCrumb breadCrumb={breadCrumb} title={title} />}
                 {children}
-                <FooterV1 />
+                <FooterV2 />
             </div>
         </>
     );

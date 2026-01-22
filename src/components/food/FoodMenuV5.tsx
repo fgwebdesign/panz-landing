@@ -12,12 +12,12 @@ const FoodMenuV5 = () => {
                         <div className="col-lg-6 pr-50 pr-md-15 pr-xs-15 mb-md-50 mb-xs-30">
                             <div className="info">
                                 <div className="heading text-center">
-                                    <h4 className="sub-title">Fresh from ocean</h4>
-                                    <h2 className="title">Sea Food</h2>
+                                    <h4 className="sub-title">Fresco del océano</h4>
+                                    <h2 className="title">Mariscos</h2>
                                 </div>
                                 <ul className="meal-type">
-                                    <li>Half</li>
-                                    <li>Full</li>
+                                    <li>Medio</li>
+                                    <li>Completo</li>
                                 </ul>
                                 <ul className="meal-items">
                                     {FoodCartV4Data.slice(2, 3).map(food =>
@@ -43,12 +43,12 @@ const FoodMenuV5 = () => {
                             <div className="meal-thumb-less">
                                 <div className="info">
                                     <div className="heading text-center">
-                                        <h4 className="sub-title">Drinks & Wine</h4>
-                                        <h2 className="title">Beverage</h2>
+                                        <h4 className="sub-title">Bebidas & Vinos</h4>
+                                        <h2 className="title">Bebidas</h2>
                                     </div>
                                     <ul className="meal-type">
-                                        <li>Half</li>
-                                        <li>Full</li>
+                                        <li>Medio</li>
+                                        <li>Completo</li>
                                     </ul>
                                     <ul className="meal-items">
                                         {FoodCartV4Data.slice(3, 4).map(food =>

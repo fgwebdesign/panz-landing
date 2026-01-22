@@ -13,10 +13,10 @@ const BreadCrumb = ({ breadCrumb, title }: DataType) => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-12 col-md-12">
-                            <h1>{title ? title : "Error Page"}</h1>
+                            <h1>{title ? title : "Página de Error"}</h1>
                             <ul className="breadcrumb">
-                                <li><Link href="#"><i className="fas fa-home"></i> Home</Link></li>
-                                <li>{breadCrumb ? breadCrumb : "not-found"}</li>
+                                <li><Link href="#"><i className="fas fa-home"></i> Inicio</Link></li>
+                                <li>{breadCrumb ? breadCrumb : "no-encontrado"}</li>
                             </ul>
                         </div>
                     </div>

@@ -30,17 +30,17 @@ const FooterV2 = () => {
                                 <p>&copy; Copyright {(new Date().getFullYear())} PanZ Pizzería & Restaurante. Todos los derechos reservados.</p>
                             </div>
                             <div className="col-lg-6 text-end">
-                                <ul>
-                                    <li>
-                                        <Link href="/about-us">Términos</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/about-us">Privacidad</Link>
-                                    </li>
-                                    <li>
-                                        <Link href="/contact">Soporte</Link>
-                                    </li>
-                                </ul>
+                                <p className="design-credit">
+                                    Website designed by:{' '}
+                                    <Link 
+                                        href="https://www.fgwebdesign.dev/" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer"
+                                        className="design-link"
+                                    >
+                                        <span className="design-text"> <strong>FG Web Design</strong></span>
+                                    </Link>
+                                </p>
                             </div>
                         </div>
                     </div>

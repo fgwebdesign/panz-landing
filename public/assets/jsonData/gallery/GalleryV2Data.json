@@ -1,37 +1,37 @@
 [
     {
         "id": 1,
-        "thumb": "1.jpg",
-        "thumbFull": "portfolio1-full.jpg",
-        "subTitle": "Delicias",
-        "title": "Pizza"
+        "thumb": "aperol.png",
+        "thumbFull": "aperol-full.png",
+        "subTitle": "Barra de tragos",
+        "title": "Variedad de tragos para disfrutar"
     },
     {
         "id": 2,
-        "thumb": "2.jpg",
-        "thumbFull": "portfolio2-full.jpg",
+        "thumb": "pizza.png",
+        "thumbFull": "pizza-full.png",
         "subTitle": "Delicias",
-        "title": "Hamburguesa"
+        "title": "Pizzas para compartir con tu grupo familiar o amigos"
     },
     {
         "id": 3,
-        "thumb": "3.jpg",
-        "thumbFull": "portfolio3-full.jpg",
-        "subTitle": "Delicias",
-        "title": "Parrilla"
+        "thumb": "tortilla.png",
+        "thumbFull": "tortilla-full.png",
+        "subTitle": "Omelettes",
+        "title": "Acompañamientos para hacer de tu comida una experiencia completa"
     },
     {
         "id": 4,
-        "thumb": "6.jpg",
-        "thumbFull": "portfolio6-full.jpg",
-        "subTitle": "Delicias",
-        "title": "Pastas"
+        "thumb": "chivito.png",
+        "thumbFull": "chivito-full.png",
+        "subTitle": "De los favoritos de la casa",
+        "title": "Milanesas para disfrutar en familia"
     },
     {
         "id": 5,
-        "thumb": "5.jpg",
-        "thumbFull": "portfolio5-full.jpg",
-        "subTitle": "Delicias",
-        "title": "Papas Fritas"
+        "thumb": "trago.png",
+        "thumbFull": "trago-full.png",
+        "subTitle": "tragos",
+        "title": "Si no tenes tu trago favorito, lo podes descubrir"
     }
 ]

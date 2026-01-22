@@ -21,19 +21,16 @@ const BusinessHours = () => {
                             </div>
                             <div className="col-lg-6">
                                 <div className="opening-hours-info animate" data-aos="fade-left">
-                                    <h3>Opening Hours</h3>
+                                    <h3>Horarios de Apertura</h3>
                                     <p>
-                                        A relaxing and pleasant atmosphere, good jazz, dinner, and cocktails. The Patio Time Bar opens in the center..
+                                        Un ambiente relajante y agradable, buen nivel gastronómico y una barra de tragos para disfrutar con tu grupo familiar o amigos.
                                     </p>
                                     <ul className="opening-hours-table">
                                         <li>
-                                            <h6>Sunday to Tuesday:</h6> <span>10:00 - 09:00</span>
+                                            <h6>Lunes a domingo:</h6> <span>20:00 - 00:00</span>
                                         </li>
                                         <li>
-                                            <h6>Wednesday to Thursday:</h6> <span>11:30 - 10:30</span>
-                                        </li>
-                                        <li>
-                                            <h6>Friday & Saturday:</h6> <span>10:30  - 12:00</span>
+                                            <h6>Sábado y domingo:</h6> <span>11:30 - 16:00</span>
                                         </li>
                                     </ul>
                                     <div className="call-to-action">
@@ -41,8 +38,8 @@ const BusinessHours = () => {
                                             <Image src="/assets/img/icon/6.png" alt="Image Not Found" width={64} height={64} />
                                         </div>
                                         <div className="info">
-                                            <p>Call Anytime</p>
-                                            <h4><a href="tel:+964733-378901">+964733-378901</a></h4>
+                                            <p>Llama en cualquier momento</p>
+                                            <h4><a href="tel:+59891285003">+598 91 285 003</a></h4>
                                         </div>
                                     </div>
                                 </div>
