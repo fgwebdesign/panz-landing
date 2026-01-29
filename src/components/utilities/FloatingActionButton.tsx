@@ -6,11 +6,17 @@ const FloatingActionButton = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [showWhatsAppForm, setShowWhatsAppForm] = useState(false);
     const [message, setMessage] = useState('');
+    const [mounted, setMounted] = useState(false);
     const menuRef = useRef<HTMLDivElement>(null);
     const containerRef = useRef<HTMLDivElement>(null);
 
     const whatsappNumber = '59891285003';
     const pedidosYaUrl = 'https://www.pedidosya.com.uy/restaurantes/paysandu/pan-z-menu';
+
+    // Esperar a que el componente esté montado para evitar flash de hidratación
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     // Cerrar el menú al hacer clic fuera
     useEffect(() => {
@@ -94,6 +100,14 @@ const FloatingActionButton = () => {
                     right: 30px;
                     z-index: 9998;
                     font-family: var(--font-default);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease, visibility 0.3s ease;
+                }
+
+                .fab-modern-container.mounted {
+                    opacity: 1;
+                    visibility: visible;
                 }
 
                 .fab-modern-panel {
@@ -106,14 +120,18 @@ const FloatingActionButton = () => {
                     overflow: hidden;
                     min-width: 320px;
                     transform-origin: bottom right;
-                    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1), 
+                                transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                                visibility 0.4s cubic-bezier(0.4, 0, 0.2, 1);
                     opacity: 0;
+                    visibility: hidden;
                     transform: scale(0.85) translateY(20px);
                     pointer-events: none;
                 }
 
                 .fab-modern-panel.active {
                     opacity: 1;
+                    visibility: visible;
                     transform: scale(1) translateY(0);
                     pointer-events: all;
                 }
@@ -416,7 +434,7 @@ const FloatingActionButton = () => {
                 }
             `}</style>
 
-            <div className="fab-modern-container" ref={containerRef}>
+            <div className={`fab-modern-container ${mounted ? 'mounted' : ''}`} ref={containerRef}>
                 {/* Panel moderno con header bordo */}
                 <div className={`fab-modern-panel ${isOpen ? 'active' : ''}`} ref={menuRef}>
                     {!showWhatsAppForm ? (
