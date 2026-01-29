@@ -62,7 +62,7 @@ const FoodMenuV4 = () => {
                                                 {food.tabContent.map(list =>
                                                     <React.Fragment key={list.id}>
                                                         {list.tabData.map(data =>
-                                                            <SingleFoodMenuTabV3 data={data} key={data.id} />
+                                                            <SingleFoodMenuTabV3 data={data} key={`${food.id}-${list.id}-${data.id}`} />
                                                         )}
                                                     </React.Fragment>
                                                 )}

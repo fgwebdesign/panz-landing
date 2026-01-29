@@ -17,8 +17,14 @@ const SingleFoodMenuTabV3 = ({ data }: { data: DataType }) => {
     return (
         <>
             <li>
-                <div className="thumbnail">
-                    <Image src={`/assets/img/productos/${thumb}`} alt="Image Not Found" width={200} height={200} />
+                <div className="thumbnail food-menu-thumb-fixed">
+                    <Image
+                        src={`/assets/img/productos/${thumb}`}
+                        alt={name}
+                        width={176}
+                        height={176}
+                        className="food-menu-thumb-img"
+                    />
                 </div>
                 <div className="content">
                     <div className="top">

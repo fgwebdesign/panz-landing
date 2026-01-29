@@ -13589,11 +13589,30 @@ footer.bg-dark .footer-bottom-two * {
         font-size: 14px;
     }
 }
-/* FoodMenuV4 - Mantener proporción de imágenes sin estirar */
+/* FoodMenuV4 - tabThumb: proporción mantenida (contain), altura fija */
 .food-menu-v4-thumb {
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
+}
+
+/* Miniaturas del menú: tamaño fijo, proporción mantenida (sin distorsión) */
+.food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed {
+    width: 88px;
+    height: 88px;
+    min-width: 88px;
+    min-height: 88px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed .food-menu-thumb-img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    border-radius: 50%;
 }
 
 /* Design Credit - Estilos modernos para el crédito de diseño */
