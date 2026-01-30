@@ -30,14 +30,53 @@ const AboutV2 = () => {
 
     return (
         <>
-            <div className="about-style-two-area default-padding-bottom" style={{ paddingTop: '120px', paddingBottom: '120px' }}>
+            <style jsx>{`
+                .about-delivery-section {
+                    padding-top: 120px;
+                    padding-bottom: 120px;
+                }
+                .about-delivery-thumb-box {
+                    min-height: 800px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+                .about-delivery-info {
+                    padding-top: 40px;
+                    padding-bottom: 40px;
+                }
+                @media (max-width: 991px) {
+                    .about-delivery-section {
+                        padding-top: 60px;
+                        padding-bottom: 60px;
+                    }
+                    .about-delivery-thumb-box {
+                        min-height: auto;
+                    }
+                    .about-delivery-info {
+                        padding-top: 20px;
+                        padding-bottom: 20px;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .about-delivery-section {
+                        padding-top: 40px;
+                        padding-bottom: 40px;
+                    }
+                    .about-delivery-info {
+                        padding-top: 15px;
+                        padding-bottom: 15px;
+                    }
+                }
+            `}</style>
+            <div className="about-style-two-area default-padding-bottom about-delivery-section">
                 <div className="shape-overlay">
                     <Image className="animate" data-aos="fade-left" data-aos-delay="100" src="/assets/img/illustration/2.png" alt="Image Not Found" width={528} height={528} />
                 </div>
                 <div className="container">
                     <div className="row align-center">
                         <div className="col-lg-6 order-lg-last">
-                            <div className="about-style-thumb-box" style={{ minHeight: '800px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                            <div className="about-delivery-thumb-box">
                                 <div className="about-style-two-thumb video-container" style={{ 
                                     width: '100%', 
                                     maxWidth: '650px',
@@ -64,7 +103,7 @@ const AboutV2 = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 pr-80 pr-md-15 pr-xs-15">
-                            <div className="about-style-two-info" style={{ paddingTop: '40px', paddingBottom: '40px' }}>
+                            <div className="about-style-two-info about-delivery-info">
                                 <h4 className="sub-heading">¿Antojo de algo rico? <strong style={{ fontWeight: '700' }}>Lo llevamos nosotros.</strong></h4>
                                 <h2 className="title">Pedí por<span className="pedidosYaText">PedidosYa</span>  o <span className="whatsAppText">WhatsApp</span>. <br /> Mismo sabor, misma calidad, directo a tu mesa.</h2>
    

@@ -91,6 +91,11 @@ const FloatingActionButton = () => {
         setIsOpen(!isOpen);
     };
 
+    // No renderizar nada hasta que esté montado en el cliente
+    if (!mounted) {
+        return null;
+    }
+
     return (
         <>
             <style jsx>{`
@@ -100,14 +105,6 @@ const FloatingActionButton = () => {
                     right: 30px;
                     z-index: 9998;
                     font-family: var(--font-default);
-                    opacity: 0;
-                    visibility: hidden;
-                    transition: opacity 0.3s ease, visibility 0.3s ease;
-                }
-
-                .fab-modern-container.mounted {
-                    opacity: 1;
-                    visibility: visible;
                 }
 
                 .fab-modern-panel {
@@ -434,9 +431,18 @@ const FloatingActionButton = () => {
                 }
             `}</style>
 
-            <div className={`fab-modern-container ${mounted ? 'mounted' : ''}`} ref={containerRef}>
+            <div className="fab-modern-container" ref={containerRef}>
                 {/* Panel moderno con header bordo */}
-                <div className={`fab-modern-panel ${isOpen ? 'active' : ''}`} ref={menuRef}>
+                <div 
+                    className={`fab-modern-panel ${isOpen ? 'active' : ''}`} 
+                    ref={menuRef}
+                    style={{
+                        opacity: isOpen ? 1 : 0,
+                        visibility: isOpen ? 'visible' : 'hidden',
+                        transform: isOpen ? 'scale(1) translateY(0)' : 'scale(0.85) translateY(20px)',
+                        pointerEvents: isOpen ? 'auto' : 'none',
+                    }}
+                >
                     {!showWhatsAppForm ? (
                         <>
                             <div className="fab-panel-header">
