@@ -138,6 +138,38 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-nav.navbar-center {
         justify-content: center !important;
     }
+    
+    /* Forzar layout horizontal del menú en desktop */
+    nav.navbar.validnavs .navbar-collapse.collapse {
+        display: block !important;
+    }
+    
+    nav.navbar.validnavs .navbar-collapse.collapse.collapse-mobile {
+        display: block !important;
+    }
+    
+    nav.navbar.validnavs .navbar-collapse ul.nav.navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+    }
+    
+    nav.navbar.validnavs .navbar-collapse ul.nav.navbar-nav > li {
+        display: inline-block !important;
+        float: none !important;
+    }
+    
+    nav.navbar.validnavs .navbar-collapse ul.nav.navbar-nav > li > a {
+        display: inline-block !important;
+        border: none !important;
+        padding: 35px 20px !important;
+    }
+    
+    /* Ocultar logo y botón X dentro del collapse en desktop */
+    nav.navbar.validnavs .navbar-collapse.collapse > img,
+    nav.navbar.validnavs .navbar-collapse.collapse > button.navbar-toggle {
+        display: none !important;
+    }
 }
 
 /* Ocultar en sidebar móvil siempre */
@@ -13598,21 +13630,103 @@ footer.bg-dark .footer-bottom-two * {
 
 /* Miniaturas del menú: tamaño fijo, proporción mantenida (sin distorsión) */
 .food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed {
-    width: 88px;
-    height: 88px;
-    min-width: 88px;
-    min-height: 88px;
+    width: 140px;
+    height: 140px;
+    min-width: 140px;
+    min-height: 140px;
     flex-shrink: 0;
     border-radius: 50%;
     overflow: hidden;
-    background: #f5f5f5;
+    background: linear-gradient(145deg, #f8f8f8, #ececec);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08), inset 0 2px 4px rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+    border: 3px solid #fff;
+}
+
+.food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), inset 0 2px 4px rgba(255, 255, 255, 0.9);
 }
 
 .food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed .food-menu-thumb-img {
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important;
+    object-fit: cover !important;
     border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed:hover .food-menu-thumb-img {
+    transform: scale(1.1);
+}
+
+/* Grid mejorada para el food menu con imágenes más grandes */
+.food-menus-area ul.meal-items li {
+    grid-template-columns: 150px 1fr;
+    grid-column-gap: 25px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+}
+
+.food-menus-area ul.meal-items li:last-child {
+    border-bottom: none;
+}
+
+.food-menus-area ul.meal-items li:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    border-radius: 8px;
+}
+
+/* Mejoras visuales para los títulos y precios del menú */
+.food-menus-area ul.meal-items li .content .top h4 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.food-menus-area ul.meal-items li .content .top h4 a {
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.food-menus-area ul.meal-items li .content .top h4 a:hover {
+    color: var(--color-primary);
+}
+
+.food-menus-area ul.meal-items li .content .bottom p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+}
+
+/* Responsive para imágenes del menú */
+@media (max-width: 991px) {
+    .food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed {
+        width: 110px;
+        height: 110px;
+        min-width: 110px;
+        min-height: 110px;
+    }
+    
+    .food-menus-area ul.meal-items li {
+        grid-template-columns: 120px 1fr;
+        grid-column-gap: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .food-menus-area ul.meal-items li .thumbnail.food-menu-thumb-fixed {
+        width: 90px;
+        height: 90px;
+        min-width: 90px;
+        min-height: 90px;
+    }
+    
+    .food-menus-area ul.meal-items li {
+        grid-template-columns: 100px 1fr;
+        grid-column-gap: 15px;
+    }
 }
 
 /* Design Credit - Estilos modernos para el crédito de diseño */
@@ -13672,5 +13786,502 @@ footer.bg-dark .footer-bottom-two * {
         justify-content: center;
         text-align: center;
         margin-top: 15px;
+    }
+}
+
+/* ============================================
+   Sticky Promo Bar - Barra promocional superior
+   ============================================ */
+.sticky-promo-bar {
+    position: fixed;
+    top: -50px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background: var(--color-primary);
+    z-index: 99999;
+    transition: top 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.sticky-promo-bar.visible {
+    top: 0;
+}
+
+.sticky-promo-bar .container {
+    max-width: 100%;
+    padding: 0 30px;
+}
+
+.promo-bar-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.promo-bar-content .promo-icon {
+    font-size: 18px;
+}
+
+.promo-bar-content .promo-text {
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+}
+
+.promo-bar-content .promo-text strong {
+    font-weight: 600;
+}
+
+.promo-bar-content .promo-separator {
+    margin: 0 10px;
+    opacity: 0.5;
+}
+
+/* Ajustar el header sticky cuando la promo bar está visible */
+nav.navbar.validnavs.navbar-box.logo-less.sticked {
+    top: 40px !important;
+}
+
+/* Responsive para la barra promo */
+@media (max-width: 991px) {
+    .promo-bar-content {
+        padding: 8px 0;
+        gap: 10px;
+    }
+    
+    .promo-bar-content .promo-text {
+        font-size: 13px;
+    }
+    
+    .promo-bar-content .promo-icon {
+        font-size: 16px;
+    }
+    
+    nav.navbar.validnavs.navbar-box.logo-less.sticked {
+        top: 38px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Ocultar promo bar en mobile para mejor UX */
+    .sticky-promo-bar {
+        display: none !important;
+    }
+    
+    .sticky-promo-bar.visible {
+        display: none !important;
+    }
+    
+    /* Reset del top del header en mobile */
+    nav.navbar.validnavs.navbar-box.logo-less.sticked {
+        top: 0 !important;
+    }
+}
+
+/* ============================================
+   Google Reviews Button - Botón moderno
+   ============================================ */
+.google-reviews-btn {
+    margin-top: 35px;
+    text-align: left;
+}
+
+.btn-google-reviews {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border: 2px solid #e9ecef;
+    border-radius: 50px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.btn-google-reviews:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-color: #4285f4;
+    color: #4285f4;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(66, 133, 244, 0.2);
+}
+
+.btn-google-reviews svg {
+    flex-shrink: 0;
+}
+
+.btn-google-reviews span {
+    flex-grow: 1;
+}
+
+.btn-google-reviews i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.btn-google-reviews:hover i {
+    transform: translateX(5px);
+}
+
+/* Mejoras para las imágenes del testimonial */
+.testimonial-thumb img {
+    object-fit: cover !important;
+    border-radius: 50%;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .google-reviews-btn {
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .btn-google-reviews {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 767px) {
+    .btn-google-reviews {
+        padding: 12px 20px;
+        font-size: 13px;
+        gap: 10px;
+    }
+    
+    .btn-google-reviews span {
+        display: inline;
+    }
+}
+
+/* ============================================
+   Reservation Section - Diseño Moderno
+   ============================================ */
+
+/* Centrar menú de navegación en el header inicial - Solo desktop */
+@media (min-width: 1024px) {
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .nav-box {
+        position: relative;
+    }
+    
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: auto;
+    }
+
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse ul.nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0;
+    }
+    
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse ul.nav > li {
+        display: inline-block;
+    }
+
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-header {
+        position: relative;
+        left: auto;
+        z-index: 10;
+    }
+
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .attr-right {
+        position: relative;
+        right: auto;
+        z-index: 10;
+    }
+}
+
+/* Sección de reservación con más altura */
+.reservation-area.shadow.dark {
+    padding-top: 100px;
+    padding-bottom: 150px;
+    min-height: 750px;
+}
+
+/* Formulario con efecto glassmorphism */
+.reservation-form.modern {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 24px;
+    padding: 50px 45px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reservation-form.modern::after {
+    display: none;
+}
+
+.reservation-form.modern .form-group,
+.reservation-form.modern .input-group {
+    margin-bottom: 20px;
+}
+
+.reservation-form.modern label {
+    color: #374151;
+    font-weight: 600;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.reservation-form.modern input,
+.reservation-form.modern input:focus {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    color: #1f2937;
+    padding: 0 18px;
+    height: 52px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+.reservation-form.modern input:focus {
+    border-color: var(--color-primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(185, 28, 28, 0.1);
+}
+
+.reservation-form.modern input::placeholder {
+    color: #9ca3af;
+}
+
+.reservation-form.modern .form-group .nice-select {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    height: 52px;
+    padding: 0 18px;
+    transition: all 0.3s ease;
+}
+
+.reservation-form.modern .form-group .nice-select:hover,
+.reservation-form.modern .form-group .nice-select.open {
+    border-color: var(--color-primary);
+    background: #fff;
+}
+
+.reservation-form.modern .form-group .nice-select .current {
+    color: #1f2937;
+    font-size: 15px;
+}
+
+.reservation-form.modern .form-group .nice-select ul.list {
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    border: none;
+    overflow: hidden;
+}
+
+.reservation-form.modern .form-group .nice-select ul.list li {
+    padding: 12px 18px;
+    transition: all 0.2s ease;
+}
+
+.reservation-form.modern .form-group .nice-select ul.list li:hover,
+.reservation-form.modern .form-group .nice-select ul.list li.selected {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.reservation-form.modern .input-group input {
+    border-radius: 12px 0 0 12px;
+    border-right: none;
+}
+
+.reservation-form.modern .input-group span.input-group-addon {
+    background: var(--color-primary);
+    border-radius: 0 12px 12px 0;
+    padding: 0 22px;
+    border: 2px solid var(--color-primary);
+    transition: all 0.3s ease;
+}
+
+.reservation-form.modern .input-group span.input-group-addon:hover {
+    background: #991b1b;
+    border-color: #991b1b;
+}
+
+/* Botón moderno de reserva */
+.reservation-form.modern button[type="submit"] {
+    width: 100%;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, #991b1b 100%);
+    border: none;
+    border-radius: 14px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.reservation-form.modern button[type="submit"]::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.reservation-form.modern button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(185, 28, 28, 0.4);
+}
+
+.reservation-form.modern button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+.reservation-form.modern button[type="submit"]::after {
+    display: none;
+}
+
+/* Info de reservación mejorada */
+.reservation-info.modern {
+    padding-right: 40px;
+}
+
+.reservation-info.modern .sub-heading {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.reservation-info.modern .title {
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.reservation-info.modern p {
+    font-size: 17px;
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-bottom: 35px;
+}
+
+/* Cards de horarios */
+.reservation-time.modern ul {
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.reservation-time.modern ul li {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 25px 30px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    flex: 1;
+}
+
+.reservation-time.modern ul li:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-5px);
+}
+
+.reservation-time.modern ul li h4 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #fff;
+}
+
+.reservation-time.modern ul li p {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Badge de WhatsApp */
+.whatsapp-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25D366;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 25px;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-badge i {
+    font-size: 18px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .reservation-info.modern {
+        padding-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    
+    .reservation-info.modern .title {
+        font-size: 32px;
+    }
+    
+    .reservation-time.modern ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .reservation-form.modern {
+        padding: 30px 25px;
+    }
+    
+    .reservation-info.modern .title {
+        font-size: 28px;
+    }
+    
+    .reservation-time.modern ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .reservation-time.modern ul li {
+        padding: 20px;
     }
 }

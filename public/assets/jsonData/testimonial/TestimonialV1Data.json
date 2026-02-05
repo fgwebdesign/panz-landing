@@ -3,36 +3,54 @@
         "id": 1,
         "ratings": 5,
         "rate": "5/5",
-        "title": "La mejor comida de todas",
-        "text": "Excelente experiencia gastronómica. La calidad de los ingredientes y la dedicación en cada plato son evidentes. El servicio es impecable y el ambiente es acogedor. Sin duda volveremos pronto.",
-        "name": "Mateo Jiménez",
-        "designation": "Consultor Senior"
+        "title": "Excelente para comer en familia",
+        "text": "Uno de los lugares más cálidos para comer en familia o en pareja. La carta de pescados es muy buena, las pastas caseras son espectaculares y la pizza está excelente. Más de 20 años de trayectoria se notan en cada detalle.",
+        "name": "Carolina Méndez",
+        "designation": "Cliente frecuente"
     },
     {
         "id": 2,
         "ratings": 5,
         "rate": "5/5",
-        "title": "Increíble y deliciosa comida",
-        "text": "Una experiencia culinaria excepcional. Cada plato está preparado con pasión y se nota en el sabor. El personal es muy atento y profesional. Recomiendo ampliamente este lugar a todos.",
-        "name": "Ignacio Álvarez",
-        "designation": "Gerente de Marketing"
+        "title": "Platos abundantes y bien preparados",
+        "text": "La diversidad del menú es impresionante. Los platos vienen muy bien servidos y se nota la dedicación en la preparación. Las carnes son de primera calidad y el personal siempre muy amable. Sin dudas volvemos.",
+        "name": "Martín Rodríguez",
+        "designation": "Paysandú"
     },
     {
         "id": 3,
         "ratings": 5,
         "rate": "5/5",
-        "title": "La mejor comida de todas",
-        "text": "Excelente experiencia gastronómica. La calidad de los ingredientes y la dedicación en cada plato son evidentes. El servicio es impecable y el ambiente es acogedor. Sin duda volveremos pronto.",
-        "name": "Mateo Jiménez",
-        "designation": "Consultor Senior"
+        "title": "Los postres son lo mejor",
+        "text": "Vinimos por recomendación y no nos decepcionó. La parrilla de los fines de semana es espectacular, pero lo que más nos sorprendió fueron los postres caseros. El flan y el brownie con helado son increíbles.",
+        "name": "Lucía Fernández",
+        "designation": "Montevideo"
     },
     {
         "id": 4,
         "ratings": 5,
         "rate": "5/5",
-        "title": "Increíble y deliciosa comida",
-        "text": "Una experiencia culinaria excepcional. Cada plato está preparado con pasión y se nota en el sabor. El personal es muy atento y profesional. Recomiendo ampliamente este lugar a todos.",
-        "name": "Ignacio Álvarez",
-        "designation": "Gerente de Marketing"
+        "title": "Tradición sanducera de calidad",
+        "text": "PanZ es un clásico de Paysandú. Funciona como restaurante, pizzería y parrilla. El ambiente es muy acogedor y la atención siempre cordial. Los chivitos y las milanesas son de los mejores de la zona.",
+        "name": "Diego Sánchez",
+        "designation": "Cliente local"
+    },
+    {
+        "id": 5,
+        "ratings": 5,
+        "rate": "5/5",
+        "title": "Variedad para todos los gustos",
+        "text": "Fuimos con un grupo grande y cada uno pidió algo diferente: pizzas, pastas, parrilla y pescados. Todos quedamos más que satisfechos. El delivery también funciona muy bien cuando no podemos ir al local.",
+        "name": "Valentina Acosta",
+        "designation": "Paysandú"
+    },
+    {
+        "id": 6,
+        "ratings": 4,
+        "rate": "4/5",
+        "title": "Muy recomendable",
+        "text": "La comida es excelente y las porciones son generosas. El local es cómodo y el ambiente familiar. Las pastas caseras y la cafetería son un punto alto. Ideal para cualquier ocasión.",
+        "name": "Sebastián Olivera",
+        "designation": "Turista"
     }
 ]

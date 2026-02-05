@@ -21,9 +21,10 @@ const SingleFoodMenuTabV3 = ({ data }: { data: DataType }) => {
                     <Image
                         src={`/assets/img/productos/${thumb}`}
                         alt={name}
-                        width={176}
-                        height={176}
+                        width={220}
+                        height={220}
                         className="food-menu-thumb-img"
+                        style={{ objectFit: 'cover' }}
                     />
                 </div>
                 <div className="content">

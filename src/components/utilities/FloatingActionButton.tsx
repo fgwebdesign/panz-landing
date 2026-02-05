@@ -296,6 +296,44 @@ const FloatingActionButton = () => {
                     transform: rotate(135deg) scale(1.12);
                 }
 
+                .fab-trigger-wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                }
+
+                .fab-label {
+                    background: white;
+                    color: var(--color-heading);
+                    padding: 10px 18px;
+                    border-radius: 50px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+                    white-space: nowrap;
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    pointer-events: none;
+                }
+
+                .fab-label.hidden {
+                    opacity: 0;
+                    transform: translateX(20px);
+                    pointer-events: none;
+                }
+
+                .fab-label::after {
+                    content: '';
+                    position: absolute;
+                    right: -6px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-left: 8px solid white;
+                    border-top: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                }
+
                 .fab-whatsapp-form-modern {
                     padding: 20px;
                 }
@@ -534,14 +572,19 @@ const FloatingActionButton = () => {
                     )}
                 </div>
 
-                {/* Botón principal moderno */}
-                <div
-                    className={`fab-main-trigger ${isOpen ? 'active' : ''}`}
-                    onClick={toggleMenu}
-                    role="button"
-                    aria-label="Menú de contacto"
-                >
-                    <i className="fas fa-plus"></i>
+                {/* Botón principal moderno con etiqueta */}
+                <div className="fab-trigger-wrapper">
+                    <span className={`fab-label ${isOpen ? 'hidden' : ''}`}>
+                        Contáctanos
+                    </span>
+                    <div
+                        className={`fab-main-trigger ${isOpen ? 'active' : ''}`}
+                        onClick={toggleMenu}
+                        role="button"
+                        aria-label="Menú de contacto"
+                    >
+                        <i className="fas fa-plus"></i>
+                    </div>
                 </div>
             </div>
         </>

@@ -1,12 +1,7 @@
 "use client"
 import Link from 'next/link';
-import { toast } from 'react-toastify';
 import SocialShare from '../social/SocialShare';
 import Image from 'next/image';
-
-interface FormEventHandler {
-    (event: React.FormEvent<HTMLFormElement>): void;
-}
 
 interface DataType {
     isInfoOpen: boolean;
@@ -14,14 +9,6 @@ interface DataType {
 }
 
 const SidebarInfoV2 = ({ closeInfoBar, isInfoOpen }: DataType) => {
-
-    const handleSubscribe: FormEventHandler = (event) => {
-        event.preventDefault()
-        const form = event.target as HTMLFormElement;
-        form.reset()
-        toast.success("¡Gracias por suscribirte!")
-    }
-
     return (
         <>
             <div className={`side ${isInfoOpen ? "on" : ""}`}>
@@ -58,19 +45,6 @@ const SidebarInfoV2 = ({ closeInfoBar, isInfoOpen }: DataType) => {
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div className="widget newsletter">
-                    <h4 className="title">¡Suscríbete!</h4>
-                    <form onSubmit={handleSubscribe}>
-                        <div className="input-group stylish-input-group">
-                            <input type="email" placeholder="Ingresa tu email" className="form-control" name="email" autoComplete='off' required />
-                            <span className="input-group-addon">
-                                <button type="submit">
-                                    <i className="fas fa-arrow-right"></i>
-                                </button>
-                            </span>
-                        </div>
-                    </form>
                 </div>
                 <div className="widget social">
                     <ul className="link">

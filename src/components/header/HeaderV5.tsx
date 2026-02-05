@@ -18,6 +18,20 @@ const HeaderV5 = () => {
     return (
         <>
             <header>
+                {/* Barra promocional superior - aparece solo en estado sticky */}
+                <div className={`sticky-promo-bar ${isMenuSticky ? "visible" : ""}`}>
+                    <div className="container">
+                        <div className="promo-bar-content">
+                            <span className="promo-icon">🛵</span>
+                            <span className="promo-text">
+                                <strong>Delivery y Reservas:</strong> 4722 9551 
+                                <span className="promo-separator">|</span> 
+                                18 de Julio y Setembrino Pereda, Paysandú
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
                 <nav className={`navbar mobile-sidenav navbar-box logo-less navbar-default validnavs ${isOpen ? "force-sticky navbar-responsive" : ""} ${isMenuSticky ? "sticked" : ""}`}>
 
                     <div className="container nav-box d-flex justify-content-between align-items-center">

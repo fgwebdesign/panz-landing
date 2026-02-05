@@ -67,6 +67,13 @@ const AboutV2 = () => {
                         padding-top: 15px;
                         padding-bottom: 15px;
                     }
+                    .about-delivery-thumb-box {
+                        padding: 0 25px;
+                    }
+                    .about-delivery-thumb-box .about-style-two-thumb {
+                        max-width: 85% !important;
+                        margin: 0 auto;
+                    }
                 }
             `}</style>
             <div className="about-style-two-area default-padding-bottom about-delivery-section">
