@@ -13966,30 +13966,17 @@ nav.navbar.validnavs.navbar-box.logo-less.sticked {
    Reservation Section - Diseño Moderno
    ============================================ */
 
-/* Centrar menú de navegación en el header inicial - Solo desktop */
+/* Ocultar menú y nav-box en el header inicial (fondo rojo) - Solo desktop */
 @media (min-width: 1024px) {
+    /* Ocultar el contenedor blanco completo en estado inicial */
     nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .nav-box {
-        position: relative;
+        display: none !important;
     }
     
     nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: auto;
-    }
-
-    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse ul.nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 0;
+        display: none !important;
     }
     
-    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-collapse ul.nav > li {
-        display: inline-block;
-    }
-
     nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .navbar-header {
         position: relative;
         left: auto;
@@ -14000,6 +13987,11 @@ nav.navbar.validnavs.navbar-box.logo-less.sticked {
         position: relative;
         right: auto;
         z-index: 10;
+    }
+    
+    /* Ocultar botón hamburguesa en estado inicial */
+    nav.navbar.validnavs.navbar-box.logo-less:not(.sticked) .attr-right .attr-nav {
+        display: none !important;
     }
 }
 
